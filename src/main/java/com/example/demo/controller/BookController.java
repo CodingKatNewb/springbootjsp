@@ -48,7 +48,7 @@ public class BookController {
 
     @PostMapping("/addBook")
     public RedirectView addBook(@ModelAttribute("book") Book book, RedirectAttributes redirectAttributes) {
-        final RedirectView redirectView = new RedirectView("/book/addBook", true);
+        final RedirectView redirectView = new RedirectView("/book/viewBooks", true);
         Book savedBook = bookService.addBook(book);
         redirectAttributes.addFlashAttribute("savedBook", savedBook);
         redirectAttributes.addFlashAttribute("addBookSuccess", true);

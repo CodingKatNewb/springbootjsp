@@ -1,8 +1,8 @@
 package com.example.demo;
 
-import java.util.Collection;
+import java.util.List;
 
 public interface BookService {
-    Collection<Book> getBooks();
+    List<Book> getBooks();
     Book addBook(Book book);
 }
