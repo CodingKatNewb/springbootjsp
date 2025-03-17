@@ -27,13 +27,11 @@ public class BookController {
 
     @GetMapping("/books")
     public String getBooks(Model model) {
-        // Creating a Book object with the required arguments
         Book book = new Book("123456789", "The Great Gatsby", "F. Scott Fitzgerald");
 
-        // Add the book to the model to display it in the view
         model.addAttribute("book", book);
 
-        return "view-books"; // Return the name of your view (e.g., a JSP page)
+        return "view-books";
     }
 
     @GetMapping("/viewBooks")
